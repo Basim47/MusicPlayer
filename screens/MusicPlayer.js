@@ -61,11 +61,12 @@ const togglePlayBack = async playBackState => {
   }
 };
 
+const defaultImg = require("../assets/img/defImg.jpg")
 const MusicPlayer = () => {
   const [songIndex, setSongIndex] = useState(0);
   const [trackTitle, setTrackTitle] = useState();
   const [trackArtist, setTrackArtist] = useState();
-  const [trackImage, setTrackImage] = useState();
+  const [trackImage, setTrackImage] = useState(defaultImg);
   const [repeatMode, setRepeatMode] = useState('off');
   const playBackState = usePlaybackState();
   const progress = useProgress();
